@@ -17,19 +17,19 @@ public class Main {
         }
         //game start here
         System.out.println("Guessing number game");
-        //giving  user option to either lay or not
+        //giving  user option to either play or not
         System.out.println("if you wish to play press1");
         //ii take the user option by scanner and work with it
         Scanner input2 = new Scanner(System.in);
         String c = input2.nextLine();
-        /*first if statement used to direct user into a game or outside the game
-        so first i used if statement then try catch block to handle typo
-        then i continued by using other different statements to perform game options and redirection
+        /*first if statement used to direct user into a game or outside the game,
+        so first I used if statement then try catch block to handle typo
+        then I continued by using other different statements to perform game options and redirection
          */
         if (c.equals("1")) {
             System.out.println("Game starts ");
             /* Loading
-            here wth the use of try cath block exception and i created a loading pause
+            here wth the use of try catch block exception, and I created a loading pause
             user will hav eto wai for about 3000 milliseconds
             this is done by thread try catch control
              */
@@ -51,25 +51,46 @@ public class Main {
             System.out.println("--------------------------------------------");
         }
         {
-            /*here i start to work with the game engine
+            /*here I start to work with the game engine
             from now the input 3 scanner object will be working for first game
-            inside here i created a little Algorithm by using aRandom number method
+            inside here I created a little Algorithm by using aRandom number method
              */
             Scanner input3 = new Scanner(System.in);
             int d = input3.nextInt();
             if (d == (1)) {
-                //i created three trial game input you can only guess three times
+                //I created three trial game input you can only guess three times
+                //here I just notify the user about this
                 System.out.println("........................");
+                System.out.println("these are the Game rules");
                 System.out.println("you have 3 trials to start guessing");
+                System.out.println("only one number per trial");
                 System.out.println("**********************");
                 System.out.println("guess the first number");
-
+             /*
+             here I started to work on the options given above from the print lines
+             first I take the input from the user
+             second I created the random number object specified to a max and minimum
+              I gave a low range so that a user will have easy chances of winning
+              */
                 Scanner input4 = new Scanner(System.in);
+                /*
+                /int "i" is key point of this part because will help to -
+                understand how does the random number work in this game
+                 */
+                //this int e will return the  user guessed number input
                 int e = input4.nextInt();
+               //here I created the random number
                 Random number1 = new Random();
+                // I gave it two integers that will define its range
                 int min = 1;
                 int max = 4;
+                //then int (i) will give the random number that will be working on
                 int i = number1.nextInt(max + min) + min;
+                /*
+                in here I created the last if clauses
+                that will be able to give a user some results
+                According to his choices of numbers
+                 */
                 if (e == (i)) {
                     System.out.println("your guess was "+e);
                     System.out.println("the Random number was: "+i);

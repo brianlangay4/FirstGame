@@ -64,6 +64,7 @@ public class Main {
                 System.out.println("these are the Game rules");
                 System.out.println("you have 3 trials to start guessing");
                 System.out.println("only one number per trial");
+                System.out.println("HINT! guess from 1-5");
                 System.out.println("**********************");
                 System.out.println("guess the first number");
              /*
